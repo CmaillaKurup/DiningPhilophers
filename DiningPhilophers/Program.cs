@@ -9,14 +9,14 @@ namespace DiningPhilophers
     {
         //static bool array holding 5 bools wich starts from 0 and goes to 4
         static bool[] forkIsAvailable = new bool[5];
-        static object _lock = new object();
+        static object _lock = new ();
 
         //instansing all my filosofs
-        static Philosoph PhilosophOne = new Philosoph(false, false, "1");
-        static Philosoph PhilosophTwo = new Philosoph(false,false, "2");
-        static Philosoph PhilosophThree = new Philosoph(false, false, "3");
-        static Philosoph PhilosophFour = new Philosoph(false, false, "4");
-        static Philosoph PhilosophFive = new Philosoph(false, false, "5");
+        static Philosoph PhilosophOne = new(false, false, "1");
+        static Philosoph PhilosophTwo = new (false,false, "2");
+        static Philosoph PhilosophThree = new (false, false, "3");
+        static Philosoph PhilosophFour = new (false, false, "4");
+        static Philosoph PhilosophFive = new (false, false, "5");
 
         static void Main()
         {
@@ -24,11 +24,11 @@ namespace DiningPhilophers
             Program pg = new Program();
             
             //creating a threat for every filosof
-            Thread threadOne = new Thread(new ThreadStart(pg.PhiloOneEats));
-            Thread threadTwo = new Thread(new ThreadStart(pg.PhiloTwoEats));
-            Thread threadThree = new Thread(new ThreadStart(pg.PhiloThreeEats));
-            Thread threadFour = new Thread(new ThreadStart(pg.PhiloFourEats));
-            Thread threadFive = new Thread(new ThreadStart(pg.PhiloFiveEats));
+            Thread threadOne = new Thread(pg.PhiloOneEats);
+            Thread threadTwo = new Thread(pg.PhiloTwoEats);
+            Thread threadThree = new Thread(pg.PhiloThreeEats);
+            Thread threadFour = new Thread(pg.PhiloFourEats);
+            Thread threadFive = new Thread(pg.PhiloFiveEats);
             
             //starting my threads
             threadOne.Start();
@@ -151,7 +151,7 @@ namespace DiningPhilophers
         //variables
         private bool lf { get; set; }
         private bool rf { get; set; }
-        private string name { get; set; }
+        private string name { get; }
 
         //constructor  
         public Philosoph(bool lf, bool rf, string name)
@@ -164,7 +164,7 @@ namespace DiningPhilophers
         //checks if the left fork is on the table and make the filosof pick it up if it is
         public bool PickUpLeftFork(bool forkOnTable)
         {
-            if (forkOnTable == true)
+            if (forkOnTable)
             {
                 forkOnTable = false;
                 lf = true;
@@ -176,7 +176,7 @@ namespace DiningPhilophers
         //checks if the right fork is on the table and make the filosof pick it up if it is
         public bool PickUpRightFork(bool forkOnTable)
         {
-            if (forkOnTable == true)
+            if (forkOnTable)
             {
                 forkOnTable = false;
                 rf = true;
@@ -187,7 +187,7 @@ namespace DiningPhilophers
         //checks if the filosof have a fork in each hand and make the filosof eat if that is the case
         public void Eat()
         {
-            if (lf == true && rf == true)
+            if (lf && rf)
             {
                 Console.WriteLine(name + " is eating");
             }

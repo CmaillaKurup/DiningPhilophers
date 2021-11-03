@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a2a606d-46d3-45d0-8266-287a9524575a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DiningPhilophers/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DiningPhilophers/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiningPhilophers/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiningPhilophers/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,8 +60,17 @@
       <option name="presentableId" value="Default" />
       <updated>1635847264887</updated>
       <workItem from="1635847275565" duration="2106000" />
-      <workItem from="1635851599786" duration="1784000" />
+      <workItem from="1635851599786" duration="2101000" />
+      <workItem from="1635924541578" duration="348000" />
     </task>
+    <task id="LOCAL-00001" summary="Philosophers done">
+      <created>1635853699693</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1635853699693</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
@@ -79,5 +89,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Philosophers done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Philosophers done" />
   </component>
 </project>
